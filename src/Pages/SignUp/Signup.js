@@ -74,7 +74,7 @@ const Signup = () => {
 
 
                                 // Save user information to the database
-                                fetch('http://localhost:5000/users', {
+                                fetch('https://social-server-sandy.vercel.app/users', {
                                     method: 'POST',
                                     headers: {
                                         'content-type': 'application/json',
@@ -116,7 +116,7 @@ const Signup = () => {
                 //else at first create user then send database and then call for token
 
                 if (user.email) {
-                    fetch(`http://localhost:5000/finduser?email=${user?.email}`)
+                    fetch(`https://social-server-sandy.vercel.app/finduser?email=${user?.email}`)
                         .then(res => res.json())
                         .then(data => {
                             if (data.accessToken) {
@@ -135,7 +135,7 @@ const Signup = () => {
 
                                 // console.log(profile)
                                 // Save user information to the database
-                                fetch('http://localhost:5000/users', {
+                                fetch('https://social-server-sandy.vercel.app/users', {
                                     method: 'POST',
                                     headers: {
                                         'content-type': 'application/json',
